@@ -1,12 +1,11 @@
 package com.extrabigsucc.PageControl;
 
 import com.extrabigsucc.PageControl.Proxy.IProxy;
+import com.extrabigsucc.PageControl.Register.Recipes.BlockCrafting;
 import com.extrabigsucc.PageControl.Register.RegisterBlocks;
-import com.jcraft.jogg.Page;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraft.init.Blocks;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -34,6 +33,10 @@ public class PageControl
 
 
         RegisterBlocks.Blocks();
+        RegisterBlocks.TileEntities();
+
+        BlockCrafting.Shaped();
+        BlockCrafting.Shapeless();
 
     }
 
