@@ -1,3 +1,6 @@
 itemGroup.stpc170:stpc.name=Page Control
 
 tile.stpc170:testBlock.name=##-Test Block-##
+tile.stpc170:tileEntityTestBlock.name=##-Tile Entity Test Block-##
+
+tile.stpc170:onlineDetectorBlock.name=Online Detector
