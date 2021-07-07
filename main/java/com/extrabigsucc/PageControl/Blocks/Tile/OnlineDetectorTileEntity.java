@@ -21,7 +21,7 @@ public class OnlineDetectorTileEntity extends BaseTileEntity {
         if (tickCount >= 100) {
             String [] playerList = MinecraftServer.getServer().getConfigurationManager().getAllUsernames();
             OnlineDetectorBlock.shouldProvidePower = Arrays.asList(playerList).contains(playerName);
-            ServerLogging.sendMessageFromServer("Checked");
+            //ServerLogging.sendMessageFromServer("Checked");
             finishUpdate();
             tickCount = 0;
         }

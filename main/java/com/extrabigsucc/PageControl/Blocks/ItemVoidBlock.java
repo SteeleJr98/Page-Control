@@ -6,7 +6,6 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -43,14 +42,14 @@ public class ItemVoidBlock extends BaseBlock {
         if (!world.isRemote) {
 
             if (checkIfPowered(world, x, y, z) && !poweredState) {
-                ServerLogging.sendMessageFromServer("Block has been powered");
+                //ServerLogging.sendMessageFromServer("Block has been powered");
                 delItemList(world, x, y, z);
                 poweredState = true;
 
             }
 
             if (!checkIfPowered(world, x, y, z) && poweredState) {
-                ServerLogging.sendMessageFromServer("Block has been unpowered");
+                //ServerLogging.sendMessageFromServer("Block has been unpowered");
                 poweredState = false;
             }
         }
@@ -72,7 +71,7 @@ public class ItemVoidBlock extends BaseBlock {
 
         List list = world.getEntitiesWithinAABB(EntityItem.class, box);
 
-        ServerLogging.sendMessageFromServer(String.valueOf(list));
+        //ServerLogging.sendMessageFromServer(String.valueOf(list));
 
         for (Object o : list) {
             EntityItem tempE = (EntityItem) o;
