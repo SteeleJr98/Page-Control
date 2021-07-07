@@ -13,6 +13,7 @@ public class RegisterBlocks {
         GameRegistry.registerBlock(InitBlocks.teTestBlock, BaseItemBlock.class, "teTestBlock"); //No Texture
 
         GameRegistry.registerBlock(InitBlocks.onlineDetectorBlock, BaseItemBlock.class, "onlineDetectorBlock"); //No Texture
+        GameRegistry.registerBlock(InitBlocks.itemVoidBlock, BaseItemBlock.class, "itemVoidBlock"); //No Texture
 
     }
 
