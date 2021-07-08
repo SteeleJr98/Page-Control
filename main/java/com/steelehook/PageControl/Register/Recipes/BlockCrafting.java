@@ -1,6 +1,6 @@
-package com.extrabigsucc.PageControl.Register.Recipes;
+package com.steelehook.PageControl.Register.Recipes;
 
-import com.extrabigsucc.PageControl.Init.InitBlocks;
+import com.steelehook.PageControl.Init.InitBlocks;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;

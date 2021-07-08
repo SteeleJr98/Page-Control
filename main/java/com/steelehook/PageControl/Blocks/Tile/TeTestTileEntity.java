@@ -1,7 +1,7 @@
-package com.extrabigsucc.PageControl.Blocks.Tile;
+package com.steelehook.PageControl.Blocks.Tile;
 
-import com.extrabigsucc.PageControl.Blocks.TeTestBlock;
-import com.extrabigsucc.PageControl.Handlers.ServerLogging;
+import com.steelehook.PageControl.Blocks.TeTestBlock;
+import com.steelehook.PageControl.Handlers.ServerLogging;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;

@@ -1,6 +1,5 @@
-package com.extrabigsucc.PageControl.Blocks.Base;
+package com.steelehook.PageControl.Blocks.Base;
 
-import com.extrabigsucc.PageControl.Blocks.TeTestBlock;
 import net.minecraft.tileentity.TileEntity;
 
 public class BaseTileEntity extends TileEntity {
@@ -10,5 +9,7 @@ public class BaseTileEntity extends TileEntity {
         worldObj.notifyBlocksOfNeighborChange(this.xCoord, this.yCoord, this.zCoord, myBlock);
         markDirty();
     }
+
+
 
 }

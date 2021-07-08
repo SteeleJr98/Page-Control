@@ -1,7 +1,7 @@
-package com.extrabigsucc.PageControl.Blocks.Base;
+package com.steelehook.PageControl.Blocks.Base;
 
-import com.extrabigsucc.PageControl.CreativeTabs.stpc170Tab;
-import com.extrabigsucc.PageControl.PageControl;
+import com.steelehook.PageControl.CreativeTabs.stpc170Tab;
+import com.steelehook.PageControl.PageControl;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;

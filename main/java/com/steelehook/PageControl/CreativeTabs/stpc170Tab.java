@@ -1,8 +1,6 @@
-package com.extrabigsucc.PageControl.CreativeTabs;
+package com.steelehook.PageControl.CreativeTabs;
 
-import com.extrabigsucc.PageControl.PageControl;
-import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
+import com.steelehook.PageControl.PageControl;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;

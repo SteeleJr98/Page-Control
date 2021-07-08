@@ -1,13 +1,11 @@
-package com.extrabigsucc.PageControl.Blocks;
+package com.steelehook.PageControl.Blocks;
 
-import com.extrabigsucc.PageControl.Blocks.Base.BaseBlock;
+import com.steelehook.PageControl.Blocks.Base.BaseBlock;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagString;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
-import com.extrabigsucc.PageControl.Handlers.ServerLogging;
+import com.steelehook.PageControl.Handlers.ServerLogging;
 
 public class TestBlock extends BaseBlock {
     public TestBlock(String unlocalizedName) {
@@ -21,7 +19,13 @@ public class TestBlock extends BaseBlock {
 
             if (playerM instanceof EntityPlayer) {
                 //MinecraftServer.getServer().getCommandManager().executeCommand(MinecraftServer.getServer(), "/say " + (world.getBlock(x, y, z)).getUnlocalizedName() + "placed by a player: " + ((EntityPlayer) playerM).getDisplayName());
-                ServerLogging.sendMessageFromServer((world.getBlock(x, y, z)).getLocalizedName() + " placed by: " + ((EntityPlayer) playerM).getDisplayName());
+                //ServerLogging.sendMessageFromServer((world.getBlock(x, y, z)).getLocalizedName() + " placed by: " + ((EntityPlayer) playerM).getDisplayName());
+
+                EntityPlayer playerP = (EntityPlayer) playerM;
+
+                ServerLogging.sendMessageFromServer("Player Data:");
+                ServerLogging.sendMessageFromServer("Player Name: " + playerP.getDisplayName());
+                ServerLogging.sendMessageFromServer("Player UUID: " + playerP.getUniqueID());
 
             }
             else {

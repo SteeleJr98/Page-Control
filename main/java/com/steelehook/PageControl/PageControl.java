@@ -1,8 +1,8 @@
-package com.extrabigsucc.PageControl;
+package com.steelehook.PageControl;
 
-import com.extrabigsucc.PageControl.Proxy.IProxy;
-import com.extrabigsucc.PageControl.Register.Recipes.BlockCrafting;
-import com.extrabigsucc.PageControl.Register.RegisterBlocks;
+import com.steelehook.PageControl.Proxy.IProxy;
+import com.steelehook.PageControl.Register.Recipes.BlockCrafting;
+import com.steelehook.PageControl.Register.RegisterBlocks;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -19,8 +19,8 @@ public class PageControl
     public static final String VERSION = "1.0.0";
     public static final String DEPS = "required-after:Forge@[10.13.4.1614,)";
 
-    public static final String CLIENT_PROXY_CLASS = "com.extrabigsucc.PageControl.Proxy.ClientProxy";
-    public static final String SERVER_PROXY_CLASS = "com.extrabigsucc.PageControl.Proxy.ServerProxy";
+    public static final String CLIENT_PROXY_CLASS = "com.steelehook.PageControl.Proxy.ClientProxy";
+    public static final String SERVER_PROXY_CLASS = "com.steelehook.PageControl.Proxy.ServerProxy";
 
     @Mod.Instance(PageControl.MODID)
     public static PageControl instance = new PageControl();

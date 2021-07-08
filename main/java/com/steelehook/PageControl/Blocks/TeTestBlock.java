@@ -1,10 +1,9 @@
-package com.extrabigsucc.PageControl.Blocks;
+package com.steelehook.PageControl.Blocks;
 
-import com.extrabigsucc.PageControl.Blocks.Base.BaseBlock;
-import com.extrabigsucc.PageControl.Blocks.Tile.TeTestTileEntity;
-import com.extrabigsucc.PageControl.Handlers.ServerLogging;
+import com.steelehook.PageControl.Blocks.Base.BaseBlock;
+import com.steelehook.PageControl.Blocks.Tile.TeTestTileEntity;
+import com.steelehook.PageControl.Handlers.ServerLogging;
 import net.minecraft.block.ITileEntityProvider;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -13,7 +12,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 

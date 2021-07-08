@@ -1,4 +1,4 @@
-package com.extrabigsucc.PageControl.Blocks.Base;
+package com.steelehook.PageControl.Blocks.Base;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;

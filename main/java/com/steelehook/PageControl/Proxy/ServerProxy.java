@@ -1,4 +1,4 @@
-package com.extrabigsucc.PageControl.Proxy;
+package com.steelehook.PageControl.Proxy;
 
 public class ServerProxy extends CommonProxy {
 }

@@ -1,4 +1,4 @@
-package com.extrabigsucc.PageControl.Handlers;
+package com.steelehook.PageControl.Handlers;
 
 import net.minecraft.server.MinecraftServer;
 
