@@ -5,3 +5,4 @@ tile.stpc170:tileEntityTestBlock.name=##-Tile Entity Test Block-##
 
 tile.stpc170:onlineDetectorBlock.name=Online Detector
 tile.stpc170:itemVoidBlock.name=Item Void
+tile.stpc170:serverItemVoidBlock.name=Creative Item Void
