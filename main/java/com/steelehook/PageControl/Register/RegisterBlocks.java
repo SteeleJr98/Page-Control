@@ -13,9 +13,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class RegisterBlocks {
     public static void Blocks() {
-        GameRegistry.registerBlock(InitBlocks.testBlock, BaseItemBlock.class, "testBlock"); //No Texture
-        GameRegistry.registerBlock(InitBlocks.teTestBlock, BaseItemBlock.class, "teTestBlock"); //No Texture
-
         GameRegistry.registerBlock(InitBlocks.onlineDetectorBlock, OnlineDetectorItemBlock.class, "onlineDetectorBlock"); //Temp Texture
         GameRegistry.registerBlock(InitBlocks.itemVoidBlock, ItemVoidItemBlock.class, "itemVoidBlock"); //Temp Texture
         GameRegistry.registerBlock(InitBlocks.serverItemVoidBlock, ServerItemVoidItemBlock.class, "serverItemVoidBlock"); //Temp Texture
