@@ -1,8 +1,10 @@
 package com.steelehook.PageControl;
 
+import com.steelehook.PageControl.Handlers.ConfigHandler;
 import com.steelehook.PageControl.Proxy.IProxy;
 import com.steelehook.PageControl.Register.Recipes.BlockCrafting;
 import com.steelehook.PageControl.Register.RegisterBlocks;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -30,7 +32,9 @@ public class PageControl
 
     @EventHandler
     public void init(FMLPreInitializationEvent event) {
-
+        String configDir = event.getModConfigurationDirectory().toString();
+        ConfigHandler.init(configDir);
+        FMLCommonHandler.instance().bus().register(new ConfigHandler());
 
         RegisterBlocks.Blocks();
         RegisterBlocks.TileEntities();
