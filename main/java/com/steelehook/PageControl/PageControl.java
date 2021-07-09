@@ -18,7 +18,7 @@ public class PageControl
 {
     public static final String NAME = "Page Control";
     public static final String MODID = "stpc170";
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "1.0.2";
     public static final String DEPS = "required-after:Forge@[10.13.4.1614,)";
 
     public static final String CLIENT_PROXY_CLASS = "com.steelehook.PageControl.Proxy.ClientProxy";
