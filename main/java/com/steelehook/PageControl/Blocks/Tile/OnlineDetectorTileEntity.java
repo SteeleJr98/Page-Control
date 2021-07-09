@@ -2,6 +2,7 @@ package com.steelehook.PageControl.Blocks.Tile;
 
 import com.steelehook.PageControl.Blocks.Base.BaseTileEntity;
 import com.steelehook.PageControl.Blocks.OnlineDetectorBlock;
+import com.steelehook.PageControl.Handlers.ConfigHandler;
 import com.steelehook.PageControl.Handlers.ServerLogging;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
@@ -16,6 +17,8 @@ public class OnlineDetectorTileEntity extends BaseTileEntity {
     public String playerName = "";
     private int tickCount = 0;
 
+    private static final int toDiv = ConfigHandler.checkTimer;
+
 
 
 
@@ -24,7 +27,7 @@ public class OnlineDetectorTileEntity extends BaseTileEntity {
 
         if (worldObj.isRemote) { return; }
 
-        if (tickCount >= 20) {
+        if (tickCount >= 20 * toDiv) {
 
             List<String> playerList = new ArrayList<String>(Arrays.asList(MinecraftServer.getServer().getConfigurationManager().getAllUsernames()));
 
@@ -41,7 +44,7 @@ public class OnlineDetectorTileEntity extends BaseTileEntity {
             finishUpdate();
             tickCount = 0;
 
-            //ServerLogging.sendMessageFromServer("Looking for player: " + playerName);
+            ServerLogging.sendMessageFromServer("Looking for player: " + playerName);
 
         }
 
