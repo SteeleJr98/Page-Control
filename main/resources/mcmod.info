@@ -2,8 +2,8 @@
 {
   "modid": "stpc170",
   "name": "Page Control",
-  "description": "Emits redstone signal when owner is online",
-  "version": "1.0.2",
+  "description": "Blocks that sense you, blocks that yeet your things.",
+  "version": "1.0.3",
   "mcversion": "1.7.10",
   "url": "",
   "updateUrl": "",
