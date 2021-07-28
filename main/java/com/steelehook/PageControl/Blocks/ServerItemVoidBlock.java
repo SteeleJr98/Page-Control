@@ -2,6 +2,7 @@ package com.steelehook.PageControl.Blocks;
 
 import com.steelehook.PageControl.Blocks.Base.BaseBlock;
 import net.minecraft.block.Block;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -45,7 +46,7 @@ public class ServerItemVoidBlock extends BaseBlock {
     }
 
     public void delItemWorld(World world) {
-        List list = world.getLoadedEntityList();
+        List list = world.loadedEntityList;
         //ServerLogging.sendMessageFromServer(String.valueOf(list));
         for (Object o : list) {
             if (o instanceof EntityItem) {
