@@ -44,7 +44,7 @@ public class OnlineDetectorTileEntity extends BaseTileEntity {
             finishUpdate();
             tickCount = 0;
 
-            ServerLogging.sendMessageFromServer("Looking for player: " + playerName);
+            //ServerLogging.sendMessageFromServer("Looking for player: " + playerName);
 
         }
 
