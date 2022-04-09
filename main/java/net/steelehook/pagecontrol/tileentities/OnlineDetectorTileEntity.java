@@ -6,6 +6,7 @@ import java.util.List;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.fml.server.ServerLifecycleHooks;
@@ -37,5 +38,17 @@ public class OnlineDetectorTileEntity extends TileEntity implements ITickableTil
 			tickCount = 0;
 		}
 		tickCount++;
+	}
+	
+	@Override
+	public void load(BlockState state, CompoundNBT nbt) {
+		playerNameString = nbt.getString("owner");
+		super.load(state, nbt);
+	}
+	
+	@Override
+	public CompoundNBT save(CompoundNBT nbt) {
+		nbt.putString("owner", playerNameString);
+		return super.save(nbt);
 	}
 }
