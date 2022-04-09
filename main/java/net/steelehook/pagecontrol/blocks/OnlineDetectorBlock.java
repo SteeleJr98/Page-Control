@@ -61,7 +61,7 @@ public class OnlineDetectorBlock extends Block {
 	}
 	
 	public static void updatePowerOutput(BlockState state, World world, BlockPos pos, boolean playerHere) {
-		world.setBlock(pos, state.setValue(power, Integer.valueOf(playerHere ? 15 : 3)), 3);
+		world.setBlock(pos, state.setValue(power, Integer.valueOf(playerHere ? 15 : 0)), 3);
 	}
 	
 	protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> p_206840_1_) {
