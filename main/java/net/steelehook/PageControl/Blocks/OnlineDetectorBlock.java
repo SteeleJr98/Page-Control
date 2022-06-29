@@ -62,7 +62,7 @@ public class OnlineDetectorBlock extends BaseBlock implements ITileEntityProvide
 
     @Override
     public int isProvidingWeakPower(IBlockAccess iba, int x, int y, int z, int side) {
-        if (!shouldProvidePower) {
+        if (!((iba.getBlockMetadata(x, y, z)) == 1)) {
             return 0;
         }
         else {
@@ -78,6 +78,13 @@ public class OnlineDetectorBlock extends BaseBlock implements ITileEntityProvide
     @Override
     public boolean hasTileEntity() {
         return true;
+    }
+    
+    public static void updateBlockPower(World world, int x, int y, int z, boolean playerIn) {
+    	
+    	int meta = playerIn ? 1 : 0;
+    	
+    	world.setBlockMetadataWithNotify(x, y, z, meta, meta);
     }
 
     public void makeNBTCompound(OnlineDetectorTileEntity tile, EntityPlayer player) {
