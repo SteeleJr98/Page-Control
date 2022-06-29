@@ -1,5 +1,6 @@
 package net.steelehook.PageControl.Blocks.Tile;
 
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.MinecraftServer;
@@ -7,10 +8,12 @@ import net.steelehook.PageControl.Blocks.OnlineDetectorBlock;
 import net.steelehook.PageControl.Blocks.Base.BaseTileEntity;
 import net.steelehook.PageControl.Handlers.ConfigHandler;
 import net.steelehook.PageControl.Handlers.ServerLogging;
+import scala.reflect.internal.Trees.If;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 
 public class OnlineDetectorTileEntity extends BaseTileEntity {
 
@@ -35,10 +38,18 @@ public class OnlineDetectorTileEntity extends BaseTileEntity {
 
 
 
-
+            int blockX = this.xCoord;
+            int blockY = this.yCoord;
+            int blockZ = this.zCoord;
+            
+            Block block = worldObj.getBlock(blockX, blockY, blockZ);
+            
+            if (block instanceof OnlineDetectorBlock) {
+            	OnlineDetectorBlock.updateBlockPower(worldObj, blockX, blockY, blockZ, playerList.contains(playerName));
+            }
             
 
-            OnlineDetectorBlock.shouldProvidePower = playerList.contains(playerName);
+            //OnlineDetectorBlock.shouldProvidePower = playerList.contains(playerName);
             //ServerLogging.sendMessageFromServer("Checked");
             //ServerLogging.sendMessageFromServer(String.valueOf(Arrays.asList(uuidList).contains(playerUUID)));
             finishUpdate();
