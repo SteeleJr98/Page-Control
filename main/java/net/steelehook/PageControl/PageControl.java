@@ -41,6 +41,8 @@ public class PageControl
 
         BlockCrafting.Shaped();
         BlockCrafting.Shapeless();
+        
+        //This line is for testing purposes
 
     }
 
