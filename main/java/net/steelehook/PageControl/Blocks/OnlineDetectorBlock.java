@@ -9,16 +9,18 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.steelehook.PageControl.Blocks.Base.BaseBlock;
+//import net.steelehook.PageControl.Blocks.Base.BaseBlock;
 import net.steelehook.PageControl.Blocks.Tile.OnlineDetectorTileEntity;
 import net.steelehook.PageControl.Handlers.ServerLogging;
+
+import net.steelehook.SteeleCore.Blocks.Base.BaseBlock;
 
 public class OnlineDetectorBlock extends BaseBlock implements ITileEntityProvider {
 
     public static boolean shouldProvidePower = false;
 
-    public OnlineDetectorBlock(String unlocalizedName) {
-        super("onlineDetectorBlock");
+    public OnlineDetectorBlock(String unlocalizedName, String modID) {
+        super(unlocalizedName, modID);
     }
 
     @Override

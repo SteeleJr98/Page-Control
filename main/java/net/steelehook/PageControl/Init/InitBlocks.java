@@ -1,10 +1,12 @@
 package net.steelehook.PageControl.Init;
 
+import net.steelehook.PageControl.PageControl;
 import net.steelehook.PageControl.Blocks.*;
-import net.steelehook.PageControl.Blocks.Base.BaseBlock;
+import net.steelehook.SteeleCore.Blocks.Base.BaseBlock;
+//import net.steelehook.PageControl.Blocks.Base.BaseBlock;
 
 public class InitBlocks {
-    public static final BaseBlock onlineDetectorBlock = new OnlineDetectorBlock("onlineDetectorBlock");
-    public static final BaseBlock itemVoidBlock = new ItemVoidBlock("itemVoidBlock");
-    public static final BaseBlock serverItemVoidBlock = new ServerItemVoidBlock("serverItemVoidBlock");
+    public static final BaseBlock onlineDetectorBlock = new OnlineDetectorBlock("onlineDetectorBlock", PageControl.MODID);
+    public static final BaseBlock itemVoidBlock = new ItemVoidBlock("itemVoidBlock", PageControl.MODID);
+    public static final BaseBlock serverItemVoidBlock = new ServerItemVoidBlock("serverItemVoidBlock", PageControl.MODID);
 }
