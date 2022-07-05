@@ -11,9 +11,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 //import net.steelehook.PageControl.Blocks.Base.BaseBlock;
 import net.steelehook.PageControl.Blocks.Tile.OnlineDetectorTileEntity;
+import net.steelehook.PageControl.CreativeTabs.stpc170Tab;
 import net.steelehook.PageControl.Handlers.ServerLogging;
-
-import net.steelehook.SteeleCore.Blocks.Base.BaseBlock;
+import net.steelehook.SteeleCore.Base.Blocks.BaseBlock;
 
 public class OnlineDetectorBlock extends BaseBlock implements ITileEntityProvider {
 
@@ -21,6 +21,7 @@ public class OnlineDetectorBlock extends BaseBlock implements ITileEntityProvide
 
     public OnlineDetectorBlock(String unlocalizedName, String modID) {
         super(unlocalizedName, modID);
+        this.setCreativeTab(stpc170Tab.stpcTab);
     }
 
     @Override

@@ -6,8 +6,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-//import net.steelehook.PageControl.Blocks.Base.BaseBlock;
-import net.steelehook.SteeleCore.Blocks.Base.BaseBlock;
+import net.steelehook.PageControl.CreativeTabs.stpc170Tab;
+import net.steelehook.SteeleCore.Base.Blocks.BaseBlock;
 
 import java.util.List;
 
@@ -19,6 +19,7 @@ public class ItemVoidBlock extends BaseBlock {
 
     public ItemVoidBlock(String unlocalizedName, String modID) {
         super(unlocalizedName, modID);
+        this.setCreativeTab(stpc170Tab.stpcTab);
     }
 
 

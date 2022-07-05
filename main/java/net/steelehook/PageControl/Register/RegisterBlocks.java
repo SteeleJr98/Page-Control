@@ -1,7 +1,6 @@
 package net.steelehook.PageControl.Register;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.steelehook.PageControl.Blocks.Base.BaseItemBlock;
 import net.steelehook.PageControl.Blocks.ItemBlocks.ItemVoidItemBlock;
 import net.steelehook.PageControl.Blocks.ItemBlocks.OnlineDetectorItemBlock;
 import net.steelehook.PageControl.Blocks.ItemBlocks.ServerItemVoidItemBlock;
@@ -20,3 +19,4 @@ public class RegisterBlocks {
         GameRegistry.registerTileEntity(OnlineDetectorTileEntity.class, "onlineDetectorTileEntity");
     }
 }
+

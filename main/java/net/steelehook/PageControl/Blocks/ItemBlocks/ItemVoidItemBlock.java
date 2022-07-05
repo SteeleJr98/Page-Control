@@ -3,7 +3,8 @@ package net.steelehook.PageControl.Blocks.ItemBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.steelehook.PageControl.Blocks.Base.BaseItemBlock;
+
+import net.steelehook.SteeleCore.Base.Blocks.BaseItemBlock;
 
 import java.util.List;
 

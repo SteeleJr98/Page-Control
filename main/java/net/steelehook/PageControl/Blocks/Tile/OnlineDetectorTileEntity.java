@@ -4,18 +4,19 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.MinecraftServer;
+
 import net.steelehook.PageControl.Blocks.OnlineDetectorBlock;
-import net.steelehook.PageControl.Blocks.Base.BaseTileEntity;
 import net.steelehook.PageControl.Handlers.ConfigHandler;
 import net.steelehook.PageControl.Handlers.ServerLogging;
-import scala.reflect.internal.Trees.If;
+
+import net.steelehook.SteeleCore.Base.Blocks.BaseTileEntity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 
-public class OnlineDetectorTileEntity extends BaseTileEntity {
+public class OnlineDetectorTileEntity extends net.steelehook.SteeleCore.Base.Blocks.BaseTileEntity {
 
     public String playerName = "";
     private int tickCount = 0;

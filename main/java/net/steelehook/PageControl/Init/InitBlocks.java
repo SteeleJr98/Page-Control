@@ -2,8 +2,7 @@ package net.steelehook.PageControl.Init;
 
 import net.steelehook.PageControl.PageControl;
 import net.steelehook.PageControl.Blocks.*;
-import net.steelehook.SteeleCore.Blocks.Base.BaseBlock;
-//import net.steelehook.PageControl.Blocks.Base.BaseBlock;
+import net.steelehook.SteeleCore.Base.Blocks.BaseBlock;
 
 public class InitBlocks {
     public static final BaseBlock onlineDetectorBlock = new OnlineDetectorBlock("onlineDetectorBlock", PageControl.MODID);

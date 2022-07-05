@@ -5,8 +5,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
-//import net.steelehook.PageControl.Blocks.Base.BaseBlock;
-import net.steelehook.SteeleCore.Blocks.Base.BaseBlock;
+import net.steelehook.PageControl.CreativeTabs.stpc170Tab;
+import net.steelehook.SteeleCore.Base.Blocks.BaseBlock;
 
 import java.util.List;
 
@@ -16,6 +16,7 @@ public class ServerItemVoidBlock extends BaseBlock {
 
     public ServerItemVoidBlock(String unlocalizedName, String modID) {
         super(unlocalizedName, modID);
+        this.setCreativeTab(stpc170Tab.stpcTab);
     }
 
 
