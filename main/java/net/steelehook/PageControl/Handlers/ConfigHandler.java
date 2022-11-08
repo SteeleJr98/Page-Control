@@ -6,6 +6,11 @@ import net.minecraftforge.common.config.Configuration;
 import net.steelehook.PageControl.PageControl;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
 public class ConfigHandler {
 
@@ -13,6 +18,8 @@ public class ConfigHandler {
     public static Configuration configuration;
 
     public static int checkTimer = 5;
+    
+    public static String[] testString;
 
     public static void init(String configDir) {
 
@@ -25,6 +32,9 @@ public class ConfigHandler {
 
     public static void loadConfig() {
         checkTimer = configuration.getInt("a", Configuration.CATEGORY_GENERAL, 5, 1, 20, "Seconds the Online Detector Checks For Its Owner(s)");
+        
+        testString = configuration.getStringList("Test Name", "Test Category", new String[] {"one",  "two", "three"}, "Test Comment");
+        
         if (configuration.hasChanged()) {
             configuration.save();
         }
