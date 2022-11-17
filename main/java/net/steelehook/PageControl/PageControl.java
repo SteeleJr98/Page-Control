@@ -1,5 +1,7 @@
 package net.steelehook.PageControl;
 
+import org.omg.CORBA.PRIVATE_MEMBER;
+
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -7,10 +9,13 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.handshake.FMLHandshakeMessage.ModList;
 import cpw.mods.fml.relauncher.ModListHelper;
 import net.minecraftforge.common.ForgeModContainer;
+import net.minecraftforge.common.MinecraftForge;
 import net.steelehook.PageControl.Handlers.ConfigHandler;
+import net.steelehook.PageControl.Handlers.SpawnStopHandling;
 import net.steelehook.PageControl.Proxy.IProxy;
 import net.steelehook.PageControl.Register.RegisterBlocks;
 import net.steelehook.PageControl.Register.Recipes.BlockCrafting;
+import scala.tools.nsc.doc.model.Public;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -40,6 +45,7 @@ public class PageControl
         String configDir = event.getModConfigurationDirectory().toString();
         ConfigHandler.init(configDir);
         FMLCommonHandler.instance().bus().register(new ConfigHandler());
+        MinecraftForge.EVENT_BUS.register(new SpawnStopHandling());
 
         RegisterBlocks.Blocks();
         RegisterBlocks.TileEntities();
@@ -47,8 +53,10 @@ public class PageControl
         BlockCrafting.Shaped();
         BlockCrafting.Shapeless();
         
-        //This line is for testing purposes
-
+//        String[] testStrings = ConfigHandler.testString;
+//        for (Object object : testStrings) {
+//        	System.out.println(object.toString());
+//        }
     }
 
     @EventHandler
