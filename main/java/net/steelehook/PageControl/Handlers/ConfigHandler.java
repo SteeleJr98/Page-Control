@@ -19,7 +19,7 @@ public class ConfigHandler {
 
     public static int checkTimer = 5;
     
-    public static String[] testString;
+    public static String[] eItemBlacklist;
 
     public static void init(String configDir) {
 
@@ -33,7 +33,7 @@ public class ConfigHandler {
     public static void loadConfig() {
         checkTimer = configuration.getInt("a", Configuration.CATEGORY_GENERAL, 5, 1, 20, "Seconds the Online Detector Checks For Its Owner(s)");
         
-        testString = configuration.getStringList("Test Name", "Test Category", new String[] {"one",  "two", "three"}, "Test Comment");
+        eItemBlacklist = configuration.getStringList("Entity Blacklist", Configuration.CATEGORY_GENERAL, new String[] {}, "One Block Per Line, no Commas. Format: itemVoidBlock");
         
         if (configuration.hasChanged()) {
             configuration.save();
