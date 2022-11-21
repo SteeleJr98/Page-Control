@@ -13,7 +13,7 @@ import scala.tools.nsc.interactive.CompilerControl.AskToDoFirstItem;
 
 public class SpawnStopHandling {
 	
-	private static final String[] blackList = ConfigHandler.testString; 
+	private static final String[] blackList = ConfigHandler.eItemBlacklist; 
 	
 	@SubscribeEvent
 	public void onEntitySpawn(EntityJoinWorldEvent event) {
@@ -30,11 +30,11 @@ public class SpawnStopHandling {
 
 				if (itemNameString.contains(":")) {
 					String[] nameList = itemNameString.split(":");
-					ServerLogging.sendMessageFromServer(nameList[1]);
+					//ServerLogging.sendMessageFromServer(nameList[1]);
 					for (String s : blackList) {
-						if (s.equals(nameList[1])) {
+						if (s.contains(nameList[1])) {
 							event.setCanceled(true);
-							ServerLogging.sendMessageFromServer("Event cancelled");
+							//ServerLogging.sendMessageFromServer("Event cancelled");
 						}
 					}
 				}
