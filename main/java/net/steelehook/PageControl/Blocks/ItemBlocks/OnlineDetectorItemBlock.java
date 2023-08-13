@@ -2,13 +2,12 @@ package net.steelehook.PageControl.Blocks.ItemBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-
-import net.steelehook.SteeleCore.Base.Blocks.BaseItemBlock;
 
 import java.util.List;
 
-public class OnlineDetectorItemBlock extends BaseItemBlock {
+public class OnlineDetectorItemBlock extends ItemBlock {
     public OnlineDetectorItemBlock(Block block) {
         super(block);
     }

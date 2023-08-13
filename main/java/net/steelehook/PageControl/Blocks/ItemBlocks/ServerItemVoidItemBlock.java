@@ -2,13 +2,12 @@ package net.steelehook.PageControl.Blocks.ItemBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-
-import net.steelehook.SteeleCore.Base.Blocks.BaseItemBlock;
 
 import java.util.List;
 
-public class ServerItemVoidItemBlock extends BaseItemBlock {
+public class ServerItemVoidItemBlock extends ItemBlock {
     public ServerItemVoidItemBlock(Block block) {
         super(block);
     }

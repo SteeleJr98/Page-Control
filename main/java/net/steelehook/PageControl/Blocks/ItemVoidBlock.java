@@ -1,24 +1,29 @@
 package net.steelehook.PageControl.Blocks;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.steelehook.PageControl.PageControl;
 import net.steelehook.PageControl.CreativeTabs.stpc170Tab;
-import net.steelehook.SteeleCore.Base.Blocks.BaseBlock;
 
 import java.util.List;
 
-public class ItemVoidBlock extends BaseBlock {
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+public class ItemVoidBlock extends Block {
 
     public static int counter = 0;
     public static boolean poweredState = false;
 
 
-    public ItemVoidBlock(String unlocalizedName, String modID) {
-        super(unlocalizedName, modID);
+    public ItemVoidBlock(Material material) {
+        super(material);
         this.setCreativeTab(stpc170Tab.stpcTab);
     }
 
@@ -80,6 +85,11 @@ public class ItemVoidBlock extends BaseBlock {
     }
 
 
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister iconRegister) {
+    	this.blockIcon = iconRegister.registerIcon(PageControl.MODID + ":itemVoidBlock");
+    }
 
 
 

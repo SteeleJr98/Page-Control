@@ -4,21 +4,23 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.MinecraftServer;
-
+import net.minecraft.tileentity.TileEntity;
 import net.steelehook.PageControl.Blocks.OnlineDetectorBlock;
 import net.steelehook.PageControl.Handlers.ConfigHandler;
 import net.steelehook.PageControl.Handlers.ServerLogging;
-
-import net.steelehook.SteeleCore.Base.Blocks.BaseTileEntity;
+//import net.steelehook.SteeleCore.Base.Blocks.BaseBlock;
+//import net.steelehook.SteeleCore.Base.Blocks.BaseTileEntity;
+//import net.steelehook.SteeleCore.Handlers.MessageLogging;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 
-public class OnlineDetectorTileEntity extends net.steelehook.SteeleCore.Base.Blocks.BaseTileEntity {
+public class OnlineDetectorTileEntity extends TileEntity {
 
-    public String playerName = "";
+    public String playerName;
+    
     private int tickCount = 0;
 
     private static final int toDiv = ConfigHandler.checkTimer;
@@ -37,7 +39,7 @@ public class OnlineDetectorTileEntity extends net.steelehook.SteeleCore.Base.Blo
 
             //List<String> playerList = new MinecraftServer.getServer().getConfigurationManager().getAllUsernames();
 
-
+            //MessageLogging.sendFromServer("from te: " + playerName);
 
             int blockX = this.xCoord;
             int blockY = this.yCoord;
@@ -79,11 +81,17 @@ public class OnlineDetectorTileEntity extends net.steelehook.SteeleCore.Base.Blo
 
     public void readFromNBT(NBTTagCompound pName) {
         super.readFromNBT(pName);
-        this.playerName = pName.getString("playerName");
+        playerName = pName.getString("playerName");
     }
 
+    public String getPlayerName() {
+    	return this.playerName;
+    }
 
-
-
+    public void finishUpdate() {
+		Block myBlock = (Block)(this.worldObj.getBlock(this.xCoord, this.yCoord, this.zCoord));
+		worldObj.notifyBlockOfNeighborChange(this.xCoord, this.yCoord, this.zCoord, myBlock);
+		markDirty();
+	}
 
 }
